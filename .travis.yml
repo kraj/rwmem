@@ -47,21 +47,21 @@ matrix:
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-precise-3.8']
-          packages: ['clang-3.8', 'g++-5']
+          packages: ['g++-6', 'clang-3.8']
       env: MYCC=clang-3.8 MYCXX=clang++-3.8
 
     - compiler: clang
       addons:
         apt:
-          sources: ['llvm-toolchain-trusty-4.0']
-          packages: ['clang-4.0']
+          sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-4.0']
+          packages: ['g++-6', 'clang-4.0']
       env: MYCC=clang-4.0 MYCXX=clang++-4.0
 
     - compiler: clang
       addons:
         apt:
-          sources: ['llvm-toolchain-trusty-5.0']
-          packages: ['clang-5.0']
+          sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-5.0']
+          packages: ['g++-6', 'clang-5.0']
       env: MYCC=clang-5.0 MYCXX=clang++-5.0
 
 # Build steps
